@@ -11,4 +11,10 @@
 - cloned Code1 repository to computer 
   - get link on button <>Code
   - open Git Bash,type git clone (link)
-- made some local changes
+- made some local changes and pushed them to GitHub
+  - important: edit message, else it will be stuck loading forever
+### Task: Discuss certain concepts:
+- Repository:
+- Commit:
+- Branch:
+- Remote:
