@@ -1,5 +1,6 @@
 # L01_Git
 
+[Nice cheatsheet I found](http://www.ndpsoftware.com/git-cheatsheet.html#loc=index)
 ## L01.1_GitHub_Markdown
 - created a GitHub account
 - created repository called "Code1"
