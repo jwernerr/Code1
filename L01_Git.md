@@ -14,7 +14,8 @@
 - made some local changes and pushed them to GitHub
   - important: edit message, else it will be stuck loading forever
 ### Task: Discuss certain concepts:
-- Repository:
-- Commit:
-- Branch:
-- Remote:
+- Repository: storage location for software packages
+- Commit: finalize changes
+- Branch: two separate paths of the same file
+- Remote: not local/on your computer
+### Task:
