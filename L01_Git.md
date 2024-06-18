@@ -44,3 +44,10 @@ git clean
   - squash like Merge except that it doesn’t carry over commit history from feature branch and only dummy commit is created with the title of Pull Request
     [source](https://dev.to/devsatasurion/git-rebase-vs-merge-vs-squash-how-to-choose-the-right-one-3a33)
 
+## L01.4_Git_Knowledge
+### Task: Answer these questions:
+- What does Visual Studio Code mean by "Sync Changes"?
+- What does the ".git" folder do in your project? (turn on hidden files and file extensions if you don't see it)
+- How does Git differ from e.g. Dropbox or Google Drive?
+  - Why not use those instead of Git?
+
