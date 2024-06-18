@@ -13,4 +13,5 @@ inspect by pressing Fn+F12
 - [structure of an HTML file](https://github.com/jwernerr/Code1/blob/main/htmlstruct.html)
 
 ## L02.3 Manipulation
+![Screenshot (10)](https://github.com/jwernerr/Code1/assets/173051010/b70c7d47-cbb6-4afb-a4ff-be360482484f)
 
