@@ -19,16 +19,19 @@ inspect by pressing Fn+F12
 ## L02.4_Tags
 [Nice tag list](https://www.w3schools.com/TAGs/)
 Categories:
-- document metadata
-- content sectioning
-- text content
-- inline text semantics
-- image/multimedia
-- embedded content
-- scripting
-- table content
-- forms
-- interactive elements
+- basics
+- formatting
+- forms and input
+- frames
+- images
+- audio/video
+- links
+- lists
+- tables
+- styles + semantics
+- meta info
+- programming
 
 Attributes:
-for example a hyperlink, color, 
+- for example href, onclick, height
+
