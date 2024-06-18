@@ -47,6 +47,7 @@ git clean
 ## L01.4_Git_Knowledge
 ### Task: Answer these questions:
 - What does Visual Studio Code mean by "Sync Changes"?
+update your project and add all changes
 - What does the ".git" folder do in your project? (turn on hidden files and file extensions if you don't see it)
 - How does Git differ from e.g. Dropbox or Google Drive?
   - Why not use those instead of Git?
