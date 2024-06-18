@@ -11,14 +11,4 @@ inspect by pressing Fn+F12
 
 .txt file contains more automatically generated information, .html file is completely empty
 - structure of an HTML file:
-<html>
-<head>
-<h1>rats</h1>
-</head>
-<body>
-<pre>
-are great
-</pre>
-</body>
-</html>
 
