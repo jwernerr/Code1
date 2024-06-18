@@ -12,6 +12,23 @@ inspect by pressing Fn+F12
 .txt file contains more automatically generated information, .html file is completely empty
 - [structure of an HTML file](https://github.com/jwernerr/Code1/blob/main/htmlstruct.html)
 
-## L02.3 Manipulation
+## L02.3_Manipulation
+### Task: Manipulate a website
 ![Screenshot (10)](https://github.com/jwernerr/Code1/assets/173051010/b70c7d47-cbb6-4afb-a4ff-be360482484f)
 
+## L02.4_Tags
+[Nice tag list](https://www.w3schools.com/TAGs/)
+Categories:
+- document metadata
+- content sectioning
+- text content
+- inline text semantics
+- image/multimedia
+- embedded content
+- scripting
+- table content
+- forms
+- interactive elements
+
+Attributes:
+for example a hyperlink, color, 
