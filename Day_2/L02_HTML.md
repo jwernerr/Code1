@@ -35,3 +35,5 @@ Categories:
 Attributes:
 - for example href, onclick, height
 
+### Task: [Experiment with tags](https://github.com/jwernerr/Code1/blob/main/htmltags.html)
+
