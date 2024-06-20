@@ -15,6 +15,7 @@ body {
 }
 button {
     background-color: blue;
+    border-style: dotted;
 }
 button:hover {
     background-color: blueviolet;
