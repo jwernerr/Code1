@@ -15,13 +15,31 @@ function nonsense(): void{
 }
 //Very beginning
 function start1(): void{
+    let visits:number=0;
+    let hastail:boolean=true;
+    let trapsnapped:boolean=false;
+    let hascheese:boolean=false;
     ratname=prompt("You are a rat. What is your name?", "Rattus Rattus")!;
     initpos();
 }
 
 //Retry start
 function start2(): void{
+    let visits:number=0;
+    let hastail:boolean=true;
+    let trapsnapped:boolean=false;
+    let hascheese:boolean=false;
     ratname=prompt("New rat, new luck! What's your name this time?", "Rattus Rattus the second")!;
+    initpos();
+}
+
+//start after a win
+function start3():void{
+    let visits:number=0;
+    let hastail:boolean=true;
+    let trapsnapped:boolean=false;
+    let hascheese:boolean=false;
+    ratname=prompt("What a run! Great Job! But there are more endings to be discovered. Lets go! How would you like to call your rat this time?", "Rattus Rattwos")!
     initpos();
 }
 
@@ -35,10 +53,10 @@ function initpos(): void{
             cheese();
             break;
         case "cave":
-            //xxx
+            cave();
             break;
         case "hole":
-            //xxxx
+            hole();
             break;
         default:
             nonsense();
@@ -67,15 +85,15 @@ function hole():void{
                 }
             }
         else{
-            let alerttext:string="You return to your hole, where you meet your mother. She is about to snap at you since you still haven’t brought anything to eat, but then she notices your bloody tail that you’re still carrying with you. She sighs. “Well, whatever " + ratname + ". This will do.” She takes your tail from you and starts munching on it. You watch her in horror, but you’re also relieved that it’s just your tail and not… you. \n \nYOU WON";
+            let alerttext:string="You return to your hole, where you meet your mother. She is about to snap at you since you still haven't brought anything to eat, but then she notices your bloody tail that you're still carrying with you. She sighs. “Well, whatever " + ratname + ". This will do.” She takes your tail from you and starts munching on it. You watch her in horror, but you're also relieved that it's just your tail and not… you. \n \nYOU WON";
             alert(alerttext);
-            //start3
+            start3();
         }
     }
     else{
-        let alerttext:string="You proudly return to your hole, carrying the piece of cheese you’ve acquired. Your mother appears immediately, sniffing the air. “I smell something delicious… oh, and cheese.” You sniff the air. It reeks of blood and you shudder at the implication. “Well then, " + ratname + ". Hand the cheese over.” You drop the cheese and she gulps it down in one piece. Shortly after, she starts coughing, collapses and dies. Seems the suspiciously delicious smelling cheese was poisoned after all… Well, you’re free now! Good job! \n \nYOU WON";
+        let alerttext:string="You proudly return to your hole, carrying the piece of cheese you've acquired. Your mother appears immediately, sniffing the air. “I smell something delicious… oh, and cheese.” You sniff the air. It reeks of blood and you shudder at the implication. “Well then, " + ratname + ". Hand the cheese over.” You drop the cheese and she gulps it down in one piece. Shortly after, she starts coughing, collapses and dies. Seems the suspiciously delicious smelling cheese was poisoned after all… Well, you're free now! Good job! \n \nYOU WON";
         alert(alerttext);
-        //start3
+        start3();
     }
 }
 
@@ -106,7 +124,7 @@ function visit1(): void{
 
 //visiting the hole for the second time
 function visit2(): void{
-    let prompttext:string="You return to your hole again where you meet your mother again. She looks hangry and shouts: “Still nothing to eat? What’s taking so long you whippersnapper? Am I supposed to eat you?!” Sounds like your mother really needs something to eat, she would literally eat anything. \n \nYou return to the Cheese and the mysterious looking Cave. What do you want to have a look at now? \nCHEESE, CAVE, return to HOLE?";
+    let prompttext:string="You return to your hole again where you meet your mother again. She looks hangry and shouts: “Still nothing to eat? What's taking so long you whippersnapper? Am I supposed to eat you?!” Sounds like your mother really needs something to eat, she would literally eat anything. \n \nYou return to the Cheese and the mysterious looking Cave. What do you want to have a look at now? \nCHEESE, CAVE, return to HOLE?";
     let word:string=prompt(prompttext, "cheese")!
     word=word.toLowerCase();
     switch (word){
@@ -131,7 +149,7 @@ function visit2(): void{
 
 //the rat visits their mother for a third time... wow
 function visit3():void{
-    alert("You return to your hole for a 3rd time. You can see your mother crouching in the corner. She whispers something you can partially understand: “..hungry…can’t…anymore…I…eat…” You ask yourself why you hear boss music and why there is a health bar on the bottom of your screen. She turns around and her eyes look like they are on fire. “MY CHILD HAS RETURNED WITH FOOD, I WILL EAT YOU WHOLE!” She jumps at you and your view becomes darker and darker until you only see darkness. \n \nYOU DIED \ntry again. *burp*");
+    alert("You return to your hole for a 3rd time. You can see your mother crouching in the corner. She whispers something you can partially understand: “..hungry…can't…anymore…I…eat…” You ask yourself why you hear boss music and why there is a health bar on the bottom of your screen. She turns around and her eyes look like they are on fire. “MY CHILD HAS RETURNED WITH FOOD, I WILL EAT YOU WHOLE!” She jumps at you and your view becomes darker and darker until you only see darkness. \n \nYOU DIED \ntry again. *burp*");
     start2();
 }
 
@@ -142,13 +160,13 @@ function cheese(): void{
     word=word.toLocaleLowerCase();
     switch(word){
         case "grab":
-            //grab
+            grab();
             break;
         case "poke":
-            //poke
+            poke();
             break;
         case "cave":
-            //cave
+            cave();
             break;
         default:
             nonsense();
@@ -170,13 +188,16 @@ function grab(): void{
         word=word.toLowerCase();
         switch(word){
             case "hole":
-                //hole
+                hascheese=true;
+                hole();
                 break;
             case "eat":
-                //eat
+                hascheese=true;
+                eat();
                 break;
             case "cave":
-                //cave
+                hascheese=true;
+                cave();
                 break;
             default:
                 nonsense();
@@ -194,18 +215,24 @@ function eat():void{
 
 //poking the cheese
 function poke():void{
-    let prompttext:string="This seems way too perfect to be true… You cautiously poke the cheese with your tail, and SNAP! The mouse trap snaps, trapping the tip of your tail. You wince in pain and attempt to pull your tail out, but to no avail. You’re left with one last option to survive… You need to bite off a part of your tail. After some munching, you’re finally free. With more movement range, you manage to pull the dead tip of your tail out of the trap. You decide to take it with you. \n \nWell, what now? Will you GRAB the cheese now that the trap has snapped already, will you return to your HOLE or will you inspect the CAVE next?";
+    let prompttext:string="This seems way too perfect to be true… You cautiously poke the cheese with your tail, and SNAP! The mouse trap snaps, trapping the tip of your tail. You wince in pain and attempt to pull your tail out, but to no avail. You're left with one last option to survive… You need to bite off a part of your tail. After some munching, you're finally free. With more movement range, you manage to pull the dead tip of your tail out of the trap. You decide to take it with you. \n \nWell, what now? Will you GRAB the cheese now that the trap has snapped already, will you return to your HOLE or will you inspect the CAVE next?";
     let word:string=prompt(prompttext,"grab")!
     word=word.toLowerCase();
     switch(word){
         case "grab":
+            trapsnapped=true;
+            hastail=false;
             grab();
             break;
         case "hole":
-            //hole
+            trapsnapped=true;
+            hastail=false;
+            hole();
             break;
         case "cave":
-            //cave
+            trapsnapped=true;
+            hastail=false;
+            cave();
             break;
         default:
             nonsense();
@@ -221,10 +248,10 @@ function cave():void{
     word=word.toLowerCase();
     switch(word){
         case "yes":
-            //yes
+            yes();
             break;
         case "no":
-            //no
+            no();
             break;
         default:
             nonsense();
@@ -246,7 +273,7 @@ function no():void{
             cave();
             break;
         case "hole":
-            //hole
+            hole();
             break;
         default:
             nonsense();
@@ -262,10 +289,10 @@ function yes():void{
     word=word.toLowerCase();
     switch(word){
         case "run":
-            //run
+            run();
             break;
         case "approach":
-            //approach
+            approach();
             break;
         default:
             nonsense();
@@ -292,10 +319,10 @@ function approach():void{
         word=word.toLowerCase();
         switch (word){
             case "skeptical":
-                //skeptical
+                skeptical();
                 break;
             case "trust":
-                //trust
+                trust();
                 break;
             default:
                 nonsense();
@@ -303,4 +330,45 @@ function approach():void{
                 break;
         }
     }
+}
+
+//rat is skeptical and does not trust the kitty cat
+function skeptical():void{
+    alert("A rat never trusts a cat, that's rule number 1 in the Rat-Bible. You turn around and try to run away, when you feel claws penetrating your body. The cat instincts overcame the cat, as rule number 1 in cat logics is to always attack a running meal. \nThat's what you get from not trusting a lovely cat. \n \nYOU DIED \ntry again meow");
+    start2();
+}
+
+//rat trusts the cat
+function trust():void{
+    if(hascheese==true){
+        let prompttext:string="Of course you trust a furry fellow. You can use any help you can get. You still have the cheese you got from the nasty trap. \n \nWould you like to SHARE your cheese with the cat or KEEP the cheese for yourself?";
+        let word:string=prompt(prompttext, "keep")!
+        word=word.toLowerCase();
+        switch(word){
+            case "share":
+                share();
+                break;
+            case  "keep":
+                keep();
+                break;
+            default:
+                nonsense();
+                trust();
+                break;
+        }
+    }
+    else{
+        alert("Of course you trust a furry fellow. You can use any help you can get. The cat nods at you and crouches down, inviting you to climb its back. You hesitate for a moment before gathering all of your rat courage and jumping on top of your new friend. You claw at the fur so you don't fall down as the cat jumps through an open window that you never would have reached on your own. You sniff the fresh air of the outside world. \n \nYou're free! You've left your scary mother behind and got yourself a new friend that will keep you safe outdoors. \nYOU WON!");
+        start3();
+    }
+}
+
+function share():void{
+    alert("As a gentlerat, you share your meal with your new friend. The cat gladly accepts your offer and eats a bit of your cheese. However, cats shouldn't eat products with milk, because they will get diarrhea. The cat needs to take a dump on the floor. It smells so bad that you burst in tears and your body automatically shuts down. Your view turns black and you cannot move a single grabby hand. \nThat's how it feels like to get shit on. \n \nYOU DIED. \nTry again. *sniff sniff*");
+    start2();
+}
+
+function keep():void{
+    alert("You decide to keep the cheese as you might need it for yourself. The cat nods at you and crouches down, inviting you to climb its back. You hesitate for a moment before gathering all of your rat courage and jumping on top of your new friend with your cheese. You claw at the fur so you don't fall down as the cat jumps through an open window that you never would have reached on your own. The cheese fell off during the acrobatic jump of the cat, but that doesn't matter because there are plenty of things to eat outdoors (and the cheese was poisoned anyways, maybe your mother will eat it >:D). You sniff the fresh air of the outside world. \n \nYou're free! You've left your scary mother behind and got yourself a new friend that will keep you safe outdoors. \nYOU WON!");
+    start3();
 }
