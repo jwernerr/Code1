@@ -15,30 +15,30 @@ function nonsense(): void{
 }
 //Very beginning
 function start1(): void{
-    let visits:number=0;
-    let hastail:boolean=true;
-    let trapsnapped:boolean=false;
-    let hascheese:boolean=false;
+    visits=0;
+    hastail=true;
+    trapsnapped=false;
+    hascheese=false;
     ratname=prompt("You are a rat. What is your name?", "Rattus Rattus")!;
     initpos();
 }
 
 //Retry start
 function start2(): void{
-    let visits:number=0;
-    let hastail:boolean=true;
-    let trapsnapped:boolean=false;
-    let hascheese:boolean=false;
+    visits=0;
+    hastail=true;
+    trapsnapped=false;
+    hascheese=false;
     ratname=prompt("New rat, new luck! What's your name this time?", "Rattus Rattus the second")!;
     initpos();
 }
 
 //start after a win
 function start3():void{
-    let visits:number=0;
-    let hastail:boolean=true;
-    let trapsnapped:boolean=false;
-    let hascheese:boolean=false;
+    visits=0;
+    hastail=true;
+    trapsnapped=false;
+    hascheese=false;
     ratname=prompt("What a run! Great Job! But there are more endings to be discovered. Lets go! How would you like to call your rat this time?", "Rattus Rattwos")!
     initpos();
 }
@@ -155,23 +155,42 @@ function visit3():void{
 
 //Arriving at the Cheese
 function cheese(): void{
-    let prompttext:string="Obviously you go to the cheese, because you need to find something to eat. The cheese is presented on a shiny pedestal. This cheese looks simply delicious, but something seems suspicious about the way it is presented. \n \nHow do you want to approach the cheese? GRAB it with your grabby hands, POKE it with your tail or leave it be and inspect the CAVE instead?";
-    let word:string=prompt(prompttext, "grab")!
-    word=word.toLocaleLowerCase();
-    switch(word){
-        case "grab":
-            grab();
-            break;
-        case "poke":
-            poke();
-            break;
-        case "cave":
-            cave();
-            break;
-        default:
-            nonsense();
-            cheese();
-            break;
+    if(hascheese==false){
+        let prompttext:string="Obviously you go to the cheese, because you need to find something to eat. The cheese is presented on a shiny pedestal. This cheese looks simply delicious, but something seems suspicious about the way it is presented. \n \nHow do you want to approach the cheese? GRAB it with your grabby hands, POKE it with your tail or leave it be and inspect the CAVE instead?";
+        let word:string=prompt(prompttext, "grab")!
+        word=word.toLowerCase();
+        switch(word){
+            case "grab":
+                grab();
+                break;
+            case "poke":
+                poke();
+                break;
+            case "cave":
+                cave();
+                break;
+            default:
+                nonsense();
+                cheese();
+                break;
+        }
+    }
+    else{
+        let prompttext:string="You returned to the cheese, but... The cheese is already in your possesion! Maybe you saw an illusion of the cheese because of blood loss. There is nothing you can do here anymore. \n \n where do you want to go next? \nGo to the CAVE or visit your HOLE?"
+        let word:string=prompt(prompttext, "cave")!
+        word=word.toLowerCase();
+        switch(word){
+            case "cave":
+                cave();
+                break;
+            case "hole":
+                hole();
+                break;
+            default:
+                nonsense();
+                cheese();
+                break;
+        }
     }
 }
 
