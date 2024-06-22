@@ -60,8 +60,8 @@ function initpos() {
 }
 //Rat returns to its hole
 function hole() {
-    if (hascheese == false) {
-        if (hastail == true) {
+    if (hascheese === false) {
+        if (hastail === true) {
             switch (visits) {
                 case 0:
                     visit1();
@@ -144,7 +144,7 @@ function visit3() {
 }
 //Arriving at the Cheese
 function cheese() {
-    if (hascheese == false) {
+    if (hascheese === false) {
         let prompttext = "Obviously you go to the cheese, because you need to find something to eat. The cheese is presented on a shiny pedestal. This cheese looks simply delicious, but something seems suspicious about the way it is presented. \n \nHow do you want to approach the cheese? GRAB it with your grabby hands, POKE it with your tail or leave it be and inspect the CAVE instead?";
         let word = prompt(prompttext, "grab");
         word = word.toLowerCase();
@@ -184,7 +184,7 @@ function cheese() {
 }
 //Grabbing the cheese
 function grab() {
-    if (trapsnapped == false) {
+    if (trapsnapped === false) {
         alert("Your mother wants her food as quick as possible, obviously you grab it with your grabby hands. You approach the delicious cheese, your mouth fills with spit. This cheese just looks so tasty! You lift the cheese when your view turns black and you feel pain in your neck. \nLike your mother always told you, safety first. \n \nYOU ARE DEAD \nnow try again.");
         start2();
     }
@@ -308,7 +308,7 @@ function run() {
 }
 //Approaches cat
 function approach() {
-    if (hastail == true) {
+    if (hastail === true) {
         alert("You cautiously approach the cat. It scans you with its big curious eyes. You almost feel a connection between the two of you… that is until the cat reaches out and catches you in between its claws. You feel pain and everything turns dark.\n \nYOU DIED\nYou may try again.");
         start2();
     }
@@ -337,7 +337,7 @@ function skeptical() {
 }
 //rat trusts the cat
 function trust() {
-    if (hascheese == true) {
+    if (hascheese === true) {
         let prompttext = "Of course you trust a furry fellow. You can use any help you can get. You still have the cheese you got from the nasty trap. \n \nWould you like to SHARE your cheese with the cat or KEEP the cheese for yourself?";
         let word = prompt(prompttext, "keep");
         word = word.toLowerCase();
