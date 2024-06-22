@@ -85,7 +85,7 @@ function hole():void{
                 }
             }
         else{
-            let alerttext:string="You return to your hole, where you meet your mother. She is about to snap at you since you still haven't brought anything to eat, but then she notices your bloody tail that you're still carrying with you. She sighs. “Well, whatever " + ratname + ". This will do.” She takes your tail from you and starts munching on it. You watch her in horror, but you're also relieved that it's just your tail and not… you. \n \nYOU WON";
+            let alerttext:string="You return to your hole, where you meet your mother. She is about to snap at you since you still haven't brought anything to eat, but then she notices your bloody tail that you're still carrying with you. She sighs. “Well, whatever " + ratname + ". This will do.” She grabs your tail with her grabby hands and starts munching on it. You watch her in horror, but you're also relieved that it's just your tail and not… you. \n \nYOU WON";
             alert(alerttext);
             start3();
         }
