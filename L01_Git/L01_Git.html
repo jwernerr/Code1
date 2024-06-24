@@ -1,0 +1,80 @@
+
+<h1>L01_Git</h1>
+
+<a href="http://www.ndpsoftware.com/git-cheatsheet.html#loc=index">Nice cheatsheet I found</a>
+<h2>L01.1_GitHub_Markdown</h2>
+
+<p>
+  <ul>
+    <li>created a GitHub account</li>
+    <li>created repository called "Code1"
+      <ul>
+        <li>repository = storage location for software packages</li>
+      </ul>
+    </li>
+    <li>created (this) markdown page (update: changed to html)</li>
+    <li>edited<a href="https://github.com/MiaGMB/Caffeine-">group repository</a></li>
+  </ul>
+</p>
+
+<h2>L01.2_Git_VS</h2>
+
+<ul>
+  <li>cloned Code1 repository to computer
+    <ul>
+      <li>get link on button <>Code</li>
+      <li>open Git Bash,type git clone (link)</li>
+    </ul>
+  </li>
+  <li>made some local changes and pushed them to GitHub
+    <ul>
+      <li>important: edit message, else it will be stuck loading forever</li>
+    </ul>
+  </li>
+</ul>
+
+<h3>Task: Discuss certain concepts:</h3>
+<ul>
+  <li>Repository: storage location for software packages (remote or local)</li>
+  <li>Commit: finalize changes</li>
+  <li>Branch: two separate paths of the same file</li>
+  <li>Remote: not local/on your computer</li>
+</ul>
+
+<h3>Task: Familiarize yourself with these Git actions:</h3>
+- stage: add to the index<br>
+- commit: captures a snapshot of the projects currently staged changes<br>
+- fetch: fetch the commits of a remote repository into local repository<br>
+- push: upload local repository content to a remote repository<br>
+- pull: fetch and download content from a remote repository and immediately update the local repository to match the content<br>
+- merge: join two or more development histories together<br>
+<a href="https://medium.com/mindorks/what-is-git-commit-push-pull-log-aliases-fetch-config-clone-56bc52a3601c">source for most of these</a>
+
+<h2>L01.3_Git_Other</h2>
+<h3>Task: Solve the following problems:</h3>
+- How do you exclude a file from being tracked by Git?<br>
+File called .gitignore in which you can specify filenames, directory names, ...<br>
+- You have changes but you want roll everything back to the last commit, discarding all the changes.<br>
+git reset --hard<br>
+- You have changes but you want roll everything back to the last commit, discarding all the changes temporarily.<br>
+<br>
+- Remove all untracked files from local folder:<br>
+git clean<br>
+- Difference between these merge strategies:<br>
+<ul>
+  <li>merge: carry over all commit history from feature branch and will add an extra dummy commit to Master branch</li>
+  <li>rebase: rewinds your commits and replays those commits again from the tip of the master branch</li>
+  <li>squash like Merge except that it doesn’t carry over commit history from feature branch and only dummy commit is created with the title of Pull Request</li>
+</ul>
+<a href="https://dev.to/devsatasurion/git-rebase-vs-merge-vs-squash-how-to-choose-the-right-one-3a33">source</a>
+<h2>L01.4_Git_Knowledge</h2>
+<h3>Task: Answer these questions:</h3>
+- What does Visual Studio Code mean by "Sync Changes"?<br>
+update your project and add all changes made in the remote repository<br>
+- What does the ".git" folder do in your project? (turn on hidden files and file extensions if you don't see it)<br>
+can't find the .git folder...<br>
+- How does Git differ from e.g. Dropbox or Google Drive?<br>
+  - Why not use those instead of Git?<br>
+lets you work on vscode idk
+
+
