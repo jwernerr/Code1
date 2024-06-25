@@ -13,7 +13,7 @@ function getRandomColor() {
       color += letters[Math.floor(Math.random() * 16)];
     }
     return color;
-  }
+}
   
 function createRandomElement():HTMLElement{
     const element = document.createElement('div');
@@ -24,6 +24,8 @@ function createRandomElement():HTMLElement{
 
     element.style.left = `${getRandomInt(0, window.innerWidth - 100)}px`;
     element.style.top = `${getRandomInt(0, window.innerHeight - 100)}px`;
+
+    element.style.color=getRandomColor();
 
     element.innerText = 'Hello!';
 

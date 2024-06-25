@@ -22,6 +22,7 @@ function createRandomElement() {
     element.style.height = `${getRandomInt(50, 100)}px`;
     element.style.left = `${getRandomInt(0, window.innerWidth - 100)}px`;
     element.style.top = `${getRandomInt(0, window.innerHeight - 100)}px`;
+    element.style.color = getRandomColor();
     element.innerText = 'Hello!';
     return element;
 }
