@@ -25,3 +25,7 @@ function createRandomElement() {
     element.innerText = 'Hello!';
     return element;
 }
+for (let i = 0; i < 3; i++) {
+    const randomElement = createRandomElement();
+    document.body.appendChild(randomElement);
+}
