@@ -15,7 +15,7 @@ function getRandomColor() {
     return color;
   }
   
-  function createRandomElement():HTMLElement{
+function createRandomElement():HTMLElement{
     const element = document.createElement('div');
 
     element.style.position = 'absolute';
@@ -28,9 +28,9 @@ function getRandomColor() {
     element.innerText = 'Hello!';
 
     return element;
-  }
+}
 
-  for (let i = 0; i < 3; i++) {
+for (let i = 0; i < 3; i++) {
     const randomElement = createRandomElement();
     document.body.appendChild(randomElement);
 }
