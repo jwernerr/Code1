@@ -1,6 +1,6 @@
 "use strict";
 let ElementText = [
-    "hello", "world", "hello world"
+    "hello", "world", "hello world", "amogus"
 ];
 let ElementColor = [
     "red", "yellow", "orange"
@@ -17,4 +17,23 @@ do {
     newSpan.style.position = "absolute";
     newSpan.style.top = Math.random() * 90 + "%";
     newSpan.style.left = Math.random() * 85 + "%";
+    newSpan.addEventListener("click", fncclick);
 } while (i < 200);
+function fncclick(_event) {
+    let SpanTarget = _event.target;
+    switch (SpanTarget.textContent) {
+        case "hello":
+            SpanTarget.textContent = "goodbye";
+            break;
+        case "hello world":
+            SpanTarget.textContent = "goodbye world";
+            break;
+        case "amogus":
+            SpanTarget.textContent = "ඞ";
+            break;
+        default:
+            SpanTarget.textContent = "amogus";
+            break;
+    }
+}
+;
