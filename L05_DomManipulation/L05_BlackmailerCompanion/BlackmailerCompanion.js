@@ -1,5 +1,5 @@
 "use strict";
-let chosencharacter;
+let chosencharacter = "A";
 window.addEventListener("load", handleLoad);
 function handleLoad(_event) {
     let mail = document.querySelector("div#mail");
@@ -16,8 +16,14 @@ function placeletter(_event) {
     letter.textContent = chosencharacter;
     letter.style.left = x + "px";
     letter.style.top = y + "px";
+    letter.addEventListener("click", deleteletter);
 }
 function choosecharacter(_event) {
     // console.log(_event);
     chosencharacter = _event.key;
+}
+function deleteletter(_event) {
+    let target = _event.target;
+    let parent = target.parentNode;
+    parent.removeChild(target);
 }

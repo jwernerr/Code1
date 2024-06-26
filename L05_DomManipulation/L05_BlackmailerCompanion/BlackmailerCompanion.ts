@@ -1,4 +1,4 @@
-let chosencharacter:string;
+let chosencharacter:string="A";
 window.addEventListener("load",handleLoad);
 
 function handleLoad(_event:Event):void{
@@ -19,9 +19,17 @@ function placeletter(_event:MouseEvent):void{
     letter.textContent=chosencharacter;
     letter.style.left=x+"px";
     letter.style.top=y+"px";
+
+    letter.addEventListener("click",deleteletter);
 }
 
 function choosecharacter(_event:KeyboardEvent):void{
     // console.log(_event);
     chosencharacter=_event.key;
+}
+
+function deleteletter(_event:MouseEvent):void{
+    let target:Node=<Node>_event.target;
+    let parent:Node=target.parentNode!;
+    parent.removeChild(target)
 }
