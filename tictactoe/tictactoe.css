@@ -1,0 +1,50 @@
+canvas{
+  border-color: black;
+  border-width: 5px;
+  border-style: solid;
+}
+
+body{
+  display: block;
+  justify-content:space-around;
+  align-items: center;
+  background-color: rgb(237, 210, 227);
+}
+
+div{
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+}
+
+#buttondiv {
+  display: flex;
+  align-items: center;
+}
+
+#canvasdiv {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#playersdiv{
+  display: flex;
+  justify-content: space-around;
+}
+
+button{
+  background-color: pink;
+  padding: 10px 24px;
+  border-radius: 8px;
+  transition-duration: 0.4s;
+}
+
+button:hover{
+  background-color: white;
+  border-color: pink;
+}
+
+h1{
+  font-family:'Times New Roman', Times, serif;
+}
